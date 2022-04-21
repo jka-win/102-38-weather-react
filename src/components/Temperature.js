@@ -15,7 +15,7 @@ export default function Temperature(props) {
   const temp = tempUnit.convert(props.value);
   const unit = tempUnit.unit;
   
-  return <span>
-    {temp.toFixed(2)}&deg;{unit}
-  </span>;
+  return <>
+    {Math.round(temp)}&deg;{unit}
+  </>;
 }

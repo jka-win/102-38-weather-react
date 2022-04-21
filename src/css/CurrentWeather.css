@@ -1,0 +1,33 @@
+
+#conditions {
+  display: grid;
+  margin: auto;
+}
+
+#temp-current {
+  grid-area: 1/1/span 2/span 1;
+  margin: 0px 10px;
+  font-size: 3em;
+}
+
+#temp-high {
+  grid-area: 1/2/span 1/span 1;
+  align-self: end;
+  justify-self: end;
+}
+
+#temp-low {
+  grid-area: 2/2/span 1/span 1;
+  justify-self: end;
+}
+
+#temp-feelslike {
+  grid-area: 3/1/span 1/span 2;
+  justify-self: center;
+  margin: 10px;
+}
+
+#humidity {
+  grid-area: 4/1/span 1/span 2;
+  justify-self: center;
+}

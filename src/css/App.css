@@ -1,5 +1,61 @@
 
-#app {
-  background-color: darkslateblue;
-  color: ghostwhite;
+p {
+  margin: 0px;
+}
+
+h1 {
+  margin: 0px;
+  text-align: center;
+}
+
+#float {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  color: white;
+}
+
+.stack {
+  display: grid;
+}
+
+.stack > * {
+  grid-area: 1 / 1 / 1 / 1;
+  margin: auto;
+}
+
+header, footer {
+  min-height: 50px;
+  border-radius: 20px;
+  background-color: black;
+}
+
+header {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+main {
+  flex: auto;
+  background-color: dimgray;
+}
+
+footer {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+#error {
+  color: hotpink;
+  font-weight: bold;
+  text-align: center;
+}
+
+#weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }

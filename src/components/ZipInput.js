@@ -1,4 +1,5 @@
 
+import '../css/ZipInput.css';
 import { useState } from 'react';
 
 export default function ZipInput(props) {
@@ -14,7 +15,7 @@ export default function ZipInput(props) {
     }
   };
 
-  return <div>
+  return <div id='zip-prompt'>
     <label>ZIP Code: </label>
     <input onChange={handleChange} onKeyUp={handleKeyUp} value={input} />
   </div>;

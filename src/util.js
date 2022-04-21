@@ -2,10 +2,15 @@
 const owmDomain = "https://api.openweathermap.org";
 const owmKey = "6939073922af39303e48a31042083059";
 
-export function fetchOwm(path, params) {
+export async function fetchOwm(path, params) {
     params = { ...params, appid: owmKey };
-    return fetch(`${owmDomain}/${path}?${new URLSearchParams(params)}`)
-        .then(res => res.json());
+    const res = await fetch(`${owmDomain}/${path}?${new URLSearchParams(params)}`);
+    const body = await res.json();
+
+    if (!res.ok) {
+        throw new Error(`${res.status} ${res.statusText}`);
+    }
+    return { res, body };
 }
 
 
@@ -28,5 +33,5 @@ export function kelvinToCelcius(k) {
 }
 
 export function kelvinToFahrenheit(k) {
-    return (k -273.15) * 9 / 5 + 32;
+    return (k - 273.15) * 9 / 5 + 32;
 }
